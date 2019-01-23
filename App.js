@@ -52,12 +52,18 @@
 import React, { Component } from 'react';
 import { Text, View } from 'react-native';
 
-// FIXME be careful how to import
+// FIXME be careful on how you import
 import Header from './src/components/header';
 import QuestionCard from './src/components/questionCard';
+import questions  from './src/questions.json';
 
 // make component
 class App extends Component {
+  state = { questions: questions}
+
+  // renderQuestions() {
+  //   console.log(this.state.questions[0]["question"])
+  // }
 
   render() {
     return (
