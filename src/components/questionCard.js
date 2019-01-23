@@ -1,16 +1,22 @@
 // import libs
-import React, { component } from 'react';
-import { View, Text } from 'react-native';
+import React, { Component } from 'react';
+import { View, Text, TouchableOpacity } from 'react-native';
 
 // make component
-const QuestionCard = (props) => {
+const QuestionCard = ({ question, option1, option2, onPress1, onPress2 }) => {
     const { containerStyle, questionStyle, optionStyle } = styles;
 
-    return(
+    return (
         <View style={containerStyle}>
-            <Text style={questionStyle}>{props.question}</Text>
-            <Text style={optionStyle}>{props.option1}</Text>
-            <Text style={optionStyle}>{props.option2}</Text>
+            <Text style={questionStyle}>{question}</Text>
+
+            <TouchableOpacity onPress={onPress1}>
+                <Text style={optionStyle}>{option1}</Text>
+            </TouchableOpacity>
+
+            <TouchableOpacity onPress={onPress2}>
+                <Text style={optionStyle}>{option2}</Text>
+            </TouchableOpacity>
         </View>
     );
 }

@@ -64,9 +64,11 @@ class App extends Component {
       <View>
         <Header title="Sample App Wow" />
         <QuestionCard
-          question="What da fun?"
+          question="This is sad?"
           option1="No way"
           option2="Ewww"
+          onPress1={() => console.log("button1 pressed")}
+          onPress2={() => console.log("button2 pressed")}
         />
       </View>
     );
