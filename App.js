@@ -18,7 +18,7 @@ import { Provider } from 'react-redux';
 
 // FIXME be careful on how you import
 import reducers from './src/reducers';
-import Home from './src/components/home';
+import Home from './src/components/Home';
 
 // make component
 class App extends Component {

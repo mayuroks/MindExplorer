@@ -3,20 +3,20 @@ import React, { Component } from 'react';
 import { Text, View } from 'react-native';
 
 // FIXME be careful on how you import
-import Header from './header';
-import QuestionCard from './questionCard';
-import questions from '../questions';
+import Header from './Header';
+import QuestionCard from './QuestionCard';
 
-
+// Redux connect
+import { connect } from 'react-redux';
+import * as actions from '../actions';
 // make component
 class Home extends Component {
-    state = { questions: questions }
-
-    // renderQuestions() {
-    //   console.log(this.state.questions[0]["question"])
-    // }
-
     render() {
+        console.log(this.props);
+
+        // does this id change with curQuestion
+        // const { id } = this.props.curQuestion;
+
         return (
             <View>
                 <Header title="Sample App Wow" />
@@ -24,7 +24,7 @@ class Home extends Component {
                     question="This is sad?"
                     option1="No way"
                     option2="Ewww"
-                    onPress1={() => console.log("Button1 pressed")}
+                    onPress1={() => this.props.selectQuestionById(0)}
                     onPress2={() => console.log("Button2 pressed")}
                 />
             </View>
@@ -32,5 +32,13 @@ class Home extends Component {
     }
 }
 
+const mapStateToProps = state => {
+    console.log(state);
+    return {
+        questions: state.questions,
+        curQuestionId: state.curQuestionId
+    };
+};
+
 // export
-export default Home;
+export default connect(mapStateToProps, actions)(Home);
