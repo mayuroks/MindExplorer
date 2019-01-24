@@ -9,6 +9,7 @@ import QuestionCard from './QuestionCard';
 // Redux connect
 import { connect } from 'react-redux';
 import * as actions from '../actions';
+
 // make component
 class Home extends Component {
     render() {
@@ -16,6 +17,7 @@ class Home extends Component {
 
         // does this id change with curQuestion
         // const { id } = this.props.curQuestion;
+        var id = 0; // FIXME adding number from this.props.curQuestionId gives NaN
 
         return (
             <View>
@@ -24,7 +26,7 @@ class Home extends Component {
                     question="This is sad?"
                     option1="No way"
                     option2="Ewww"
-                    onPress1={() => this.props.selectQuestionById(0)}
+                    onPress1={() => this.props.selectQuestionById(id++)}
                     onPress2={() => console.log("Button2 pressed")}
                 />
             </View>
@@ -35,7 +37,7 @@ class Home extends Component {
 const mapStateToProps = state => {
     console.log(state);
     return {
-        questions: state.questions,
+        question: state.question,
         curQuestionId: state.curQuestionId
     };
 };
