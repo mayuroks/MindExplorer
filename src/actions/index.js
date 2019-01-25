@@ -7,22 +7,9 @@ export const nextQuestion = () => {
     }
 }
 
-export const nextScreen = (userStage) => {
-    switch (userStage) {
-        case READY_FOR_TEST:
-            return {
-                type: 'next_screen',
-                payload: TEST_IN_PROGRESS
-            }
-        case TEST_IN_PROGRESS:
-            return {
-                type: 'next_screen',
-                payload: TEST_FINISHED
-            }
-        default:
-            return {
-                type: 'next_screen',
-                payload: TEST_IN_PROGRESS
-            }
+export const nextScreen = () => {
+    return {
+        type: 'next_screen',
+        payload: null
     }
 }

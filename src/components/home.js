@@ -13,13 +13,28 @@ import {
 } from '../reducers/userStages';
 
 class Home extends Component {
+    componentWillMount() {
+        console.log("Home will mount");
+    }
+
+    componentDidMount() {
+        console.log("Home did mount");
+        this.props.nextQuestion(); // FIXME prefetching a question
+    }
+
     renderScreen() {
+        console.log("renderScreen");
         switch (this.props.userStage) {
             case READY_FOR_TEST:
-                return <StartPersonalityTest />
+                console.log("renderScreen start test");
+                return <StartPersonalityTest
+                    onPress={this.props.nextScreen} />
             case TEST_IN_PROGRESS:
+                console.log("renderScreen test in progress");
+                // this.props.nextQuestion();
                 return this.renderQuestion();
             case TEST_FINISHED:
+                console.log("renderScreen test finished");
                 return <PersonalityReport />
             default:
                 return <StartPersonalityTest />
@@ -28,7 +43,6 @@ class Home extends Component {
 
     renderQuestion() {
         if (this.props.question) {
-            var id = this.props.questionId;
             console.log("render if");
             return <QuestionCard
                 question={this.props.question.title}
@@ -38,6 +52,7 @@ class Home extends Component {
                 onPress2={() => this.props.nextQuestion()}
             />
         } else {
+            this.props.nextScreen();
             console.log("render else");
             return;
         }
