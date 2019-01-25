@@ -9,7 +9,6 @@ const INITIAL_STATE = {
 export default (state = INITIAL_STATE, action) => {
     switch (action.type) {
         case 'next_question':
-            console.log("next_question");
             return {
                 ...state,
                 questionId: state.questionId + 1,
@@ -17,7 +16,6 @@ export default (state = INITIAL_STATE, action) => {
                 questionCount: data.length
             };
         default:
-            console.log("nooo");
             return state;
     }
 }

@@ -1,0 +1,3 @@
+export const READY_FOR_TEST = 'READY_FOR_TEST';
+export const TEST_IN_PROGRESS = 'TEST_IN_PROGRESS';
+export const TEST_FINISHED = 'TEST_FINISHED';
