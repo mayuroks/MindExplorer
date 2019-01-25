@@ -5,5 +5,5 @@ import SelectQuestion from './SelectQuestion';
 // Mapping reducer name to a method
 export default combineReducers({
     questions: QuestionReducer,
-    selectionQuestion: SelectQuestion
+    selectQuestion: SelectQuestion
 });

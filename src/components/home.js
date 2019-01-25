@@ -12,33 +12,51 @@ import * as actions from '../actions';
 
 // make component
 class Home extends Component {
-    render() {
-        console.log(this.props);
+    componentWillMount() {
+        // this.props.selectQuestionById(0);
+    }
 
+    componentDidMount() {
+        // this.props.selectQuestionById(0)
+    }
+
+    renderQuestion() {
+        console.log("render called");
+        console.log(this.props);
+        if (this.props.question !== undefined) {
+            console.log("render if");
+            return <QuestionCard
+                question={this.props.question.title}
+                option1={this.props.question.option1}
+                option2={this.props.question.option2}
+                onPress1={() => this.props.selectQuestionById(id++)}
+                onPress2={() => console.log("Button2 pressed")}
+            />
+        } else {
+            console.log("render else");
+            return;
+        }
+    }
+
+    render() {
+        // console.log(this.props);
         // does this id change with curQuestion
         // const { id } = this.props.curQuestion;
-        var id = 0; // FIXME adding number from this.props.curQuestionId gives NaN
-
         return (
             <View>
                 <Header title="Sample App Wow" />
-                <QuestionCard
-                    question="This is sad?"
-                    option1="No way"
-                    option2="Ewww"
-                    onPress1={() => this.props.selectQuestionById(id++)}
-                    onPress2={() => console.log("Button2 pressed")}
-                />
+                {this.renderQuestion()}
             </View>
         );
     }
 }
 
 const mapStateToProps = state => {
-    console.log(state);
+    // console.log(state);
     return {
         question: state.question,
-        curQuestionId: state.curQuestionId
+        questionId: state.questionId,
+        questionCount: state.questionCount
     };
 };
 
