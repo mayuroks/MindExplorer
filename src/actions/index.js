@@ -4,3 +4,10 @@ export const selectQuestionById = (questionId) => {
         payload: questionId
     }
 }
+
+export const nextQuestion = () => {
+    return {
+        type: 'next_question',
+        payload: null
+    }
+}

@@ -1,36 +1,26 @@
-// import libs
 import React, { Component } from 'react';
 import { Text, View } from 'react-native';
-
-// FIXME be careful on how you import
 import Header from './Header';
 import QuestionCard from './QuestionCard';
-
-// Redux connect
 import { connect } from 'react-redux';
 import * as actions from '../actions';
 
-// make component
 class Home extends Component {
-    componentWillMount() {
-        // this.props.selectQuestionById(0);
-    }
-
     componentDidMount() {
-        // this.props.selectQuestionById(0)
+        this.props.nextQuestion();
     }
 
     renderQuestion() {
-        console.log("render called");
-        console.log(this.props);
-        if (this.props.question !== undefined) {
+        if (this.props.question) {
+            var id = this.props.questionId;
+
             console.log("render if");
             return <QuestionCard
                 question={this.props.question.title}
                 option1={this.props.question.option1}
                 option2={this.props.question.option2}
-                onPress1={() => this.props.selectQuestionById(id++)}
-                onPress2={() => console.log("Button2 pressed")}
+                onPress1={() => this.props.nextQuestion()}
+                onPress2={() => this.props.nextQuestion()}
             />
         } else {
             console.log("render else");
@@ -39,9 +29,6 @@ class Home extends Component {
     }
 
     render() {
-        // console.log(this.props);
-        // does this id change with curQuestion
-        // const { id } = this.props.curQuestion;
         return (
             <View>
                 <Header title="Sample App Wow" />
@@ -52,13 +39,12 @@ class Home extends Component {
 }
 
 const mapStateToProps = state => {
-    // console.log(state);
+    console.log(state);
     return {
-        question: state.question,
-        questionId: state.questionId,
-        questionCount: state.questionCount
+        question: state.selectQuestion.question,
+        questionId: state.selectQuestion.questionId,
+        questionCount: state.selectQuestion.questionCount
     };
 };
 
-// export
 export default connect(mapStateToProps, actions)(Home);

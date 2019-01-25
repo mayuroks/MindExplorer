@@ -7,11 +7,15 @@ const INITIAL_STATE = {
 };
 
 export default (state = INITIAL_STATE, action) => {
-    console.log(state);
     switch (action.type) {
-        case 'select_question':
-            console.log("yess");
-            return { ...state, questionId: action.payload, question: data[action.payload], questionCount: data.length };
+        case 'next_question':
+            console.log("next_question");
+            return {
+                ...state,
+                questionId: state.questionId + 1,
+                question: data[state.questionId],
+                questionCount: data.length
+            };
         default:
             console.log("nooo");
             return state;

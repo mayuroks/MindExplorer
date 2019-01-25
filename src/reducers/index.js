@@ -1,9 +1,9 @@
 import { combineReducers } from 'redux';
 import QuestionReducer from './QuestionsReducer';
-import SelectQuestion from './SelectQuestion';
+import SelectQuestionReducer from './SelectQuestionReducer';
 
 // Mapping reducer name to a method
 export default combineReducers({
     questions: QuestionReducer,
-    selectQuestion: SelectQuestion
+    selectQuestion: SelectQuestionReducer
 });
