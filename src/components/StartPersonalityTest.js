@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Text, View, Image, TouchableOpacity } from 'react-native';
-// import Images from '../assets';
+import Images from '../../assets';
 
 class StartPersonalityTest extends Component {
     componentWillMount() {
@@ -15,17 +15,26 @@ class StartPersonalityTest extends Component {
             buttonTextStyle,
             container,
             bottom,
-            imageStyle
+            imageStyle,
+            profilePicStyle,
+            userInfoStyle
         } = styles;
         // console.log(Images.explore);
 
         return (
             <View style={container}>
-                <View>
+                <View style={userInfoStyle}>
+                    <Image
+                        style={profilePicStyle}
+                        source={Images.startPersonality.profilePic}
+                    />
                     <Text style={userFullNameStyle}>Mayur Rokade</Text>
+                </View>
+                <View>
+
                     <Text style={nudgeTextStyle}>Explore your mind right now!!</Text>
                     <Image
-                        source={require('./free_personality_test.png')}
+                        source={Images.startPersonality.mindImage}
                         style={imageStyle}
                     />
                 </View>
@@ -49,7 +58,8 @@ export default StartPersonalityTest;
 const styles = {
     container: {
         flexDirection: 'column',
-        flex: 1
+        flex: 1,
+        paddingTop: 24,
     },
     bottom: {
         flex: 1,
@@ -75,17 +85,36 @@ const styles = {
         fontWeight: 'bold'
     },
     userFullNameStyle: {
-        fontSize: 32
+        fontSize: 32,
+        fontFamily: 'opensans_bold',
+        marginLeft: 16
     },
     nudgeTextStyle: {
-        fontSize: 24,
-        marginTop: 48,
-        textAlign: 'center'
+        fontSize: 22,
+        marginTop: 64,
+        textAlign: 'center',
+        fontFamily: 'opensans_bold'
     },
     imageStyle: {
-        width: 196,
-        height: 196,
+        width: 200,
+        height: 200,
         alignSelf: 'center',
-        marginTop: 64
+        marginTop: 32,
+        borderRadius: 1000,
+        borderColor: '#ECEFF1',
+        borderWidth: 1,
+    },
+    profilePicStyle: {
+        width: 60,
+        height: 60,
+        alignSelf: 'center',
+        borderRadius: 1000,
+        borderColor: '#ECEFF1',
+        borderWidth: 1,
+    },
+    userInfoStyle: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        marginLeft: 24
     }
 }
