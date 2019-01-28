@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { View, Text, TouchableOpacity } from 'react-native';
+import { RadioGroup, RadioButton } from 'react-native-flexi-radio-button'
+
 
 class QuestionCard extends Component {
     componentWillMount() {
@@ -7,42 +9,123 @@ class QuestionCard extends Component {
         // this.props.nextQuestion();
     }
 
+    onSelect(index, value) {
+        this.setState({
+            text: `Selected index: ${index} , value: ${value}`
+        })
+    }
+
     render() {
         const { question, option1, option2, onPress1, onPress2 } = this.props
-        const { containerStyle, questionStyle, optionStyle } = styles;
-    
+        const {
+            containerStyle,
+            questionStyle,
+            optionStyle,
+            cardContainer,
+            questionCountStyle,
+            optionsContainerStyle,
+            nextButtonStyle,
+            nextButtonTextStyle,
+            buttonContainerStyle
+        } = styles;
+
         return (
             <View style={containerStyle}>
-                <Text style={questionStyle}>{question}</Text>
-    
-                <TouchableOpacity onPress={onPress1}>
-                    <Text style={optionStyle}>{option1}</Text>
-                </TouchableOpacity>
-    
-                <TouchableOpacity onPress={onPress2}>
-                    <Text style={optionStyle}>{option2}</Text>
-                </TouchableOpacity>
+                <Text style={questionCountStyle}>4/20</Text>
+                <View style={cardContainer}>
+                    <Text style={questionStyle}>{question}</Text>
+
+                    <RadioGroup
+                        style={optionsContainerStyle}
+                        onSelect={(index, value) => this.onSelect(index, value)}
+                        color='red'>
+                        <RadioButton value={'item1'} >
+                            <Text style={optionStyle}>{option1}</Text>
+                        </RadioButton>
+
+                        <RadioButton value={'item2'}>
+                            <Text style={optionStyle}>{option2}</Text>
+                        </RadioButton>
+                    </RadioGroup>
+                </View>
+
+                <View style={buttonContainerStyle}>
+                    <TouchableOpacity style={nextButtonStyle}>
+                        <Text style={nextButtonTextStyle}>
+                            Next
+                    </Text>
+                    </TouchableOpacity>
+                </View>
             </View>
         );
-    }    
+    }
 }
 
 export default QuestionCard;
 
 const styles = {
     containerStyle: {
+        flexDirection: 'column',
+        alignItems: 'stretch',
+        flex: 1,
         marginTop: 64,
-        marginLeft: 32,
-        marginRight: 32
+        marginLeft: 24,
+        marginRight: 24,
+    },
+    cardContainer: {
+        borderWidth: 2,
+        borderRadius: 4,
+        borderColor: '#ECEFF1',
+        marginTop: 32,
+        paddingTop: 16,
+        paddingBottom: 16,
+        paddingLeft: 24,
+        paddingRight: 24,
+        elevation: 2,
+        shadowRadius: 8,
+        shadowOpacity: 0.8,
+        shadowOffset: { height: 80, width: 0 }
     },
     questionStyle: {
-        fontSize: 28,
+        fontSize: 20,
         marginTop: 12,
-        marginBottom: 16
+        marginBottom: 16,
+        fontFamily: 'opensans_bold'
     },
     optionStyle: {
-        fontSize: 18,
-        marginTop: 8,
-        marginBottom: 8
+        fontSize: 16,
+        marginLeft: 8
+    },
+    questionCountStyle: {
+        textAlign: 'center',
+        fontSize: 16,
+        fontFamily: 'opensans_regular'
+    },
+    optionsContainerStyle: {
+        marginTop: 18
+    },
+    nextButtonStyle: {
+        backgroundColor: 'red',
+        height: 48,
+        borderRadius: 100,
+        justifyContent: 'center',
+        alignSelf: 'flex-end',
+        paddingLeft: 40,
+        paddingRight: 40,
+        elevation: 2,
+        shadowRadius: 8,
+        shadowOpacity: 0.8,
+        shadowOffset: { height: 80, width: 0 }
+    },
+    nextButtonTextStyle: {
+        color: 'white',
+        fontFamily: 'opensans_bold',
+        fontSize: 18
+    },
+    buttonContainerStyle: {
+        flexDirection: 'column',
+        flex: 1,
+        justifyContent: 'flex-end',
+        marginBottom: 48
     }
 }
