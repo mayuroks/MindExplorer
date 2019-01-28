@@ -16,7 +16,16 @@ class QuestionCard extends Component {
     }
 
     render() {
-        const { question, option1, option2, onPress1, onPress2 } = this.props
+        const {
+            question,
+            questionId,
+            questionCount,
+            option1,
+            option2,
+            onPress1,
+            onPress2
+        } = this.props;
+
         const {
             containerStyle,
             questionStyle,
@@ -31,14 +40,15 @@ class QuestionCard extends Component {
 
         return (
             <View style={containerStyle}>
-                <Text style={questionCountStyle}>4/20</Text>
+                <Text style={questionCountStyle}>{questionId}/{questionCount}</Text>
                 <View style={cardContainer}>
                     <Text style={questionStyle}>{question}</Text>
 
                     <RadioGroup
                         style={optionsContainerStyle}
                         onSelect={(index, value) => this.onSelect(index, value)}
-                        color='red'>
+                        color='red'
+                        selectedIndex='0'>
                         <RadioButton value={'item1'} >
                             <Text style={optionStyle}>{option1}</Text>
                         </RadioButton>
@@ -50,7 +60,9 @@ class QuestionCard extends Component {
                 </View>
 
                 <View style={buttonContainerStyle}>
-                    <TouchableOpacity style={nextButtonStyle}>
+                    <TouchableOpacity
+                        onPress={onPress1}
+                        style={nextButtonStyle}>
                         <Text style={nextButtonTextStyle}>
                             Next
                     </Text>

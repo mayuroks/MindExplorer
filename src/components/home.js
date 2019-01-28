@@ -45,6 +45,8 @@ class Home extends Component {
         if (this.props.question) {
             console.log("render if");
             return <QuestionCard
+                questionCount={this.props.questionCount}
+                questionId={this.props.questionId}
                 question={this.props.question.title}
                 option1={this.props.question.option1}
                 option2={this.props.question.option2}
