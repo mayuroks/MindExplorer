@@ -60,8 +60,9 @@ class Home extends Component {
 
     render() {
         return (
-            <View>
-                <Header title="Sample App Wow" />
+            <View style={{
+                flex: 1
+            }}>
                 {this.renderScreen()}
             </View>
         );

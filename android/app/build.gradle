@@ -99,6 +99,7 @@ android {
 
     defaultConfig {
         applicationId "com.personality"
+//        applicationId "com.mayur.mindexplorer" FIXME
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
