@@ -13,3 +13,13 @@ export const nextScreen = () => {
         payload: null
     }
 }
+
+export const selectOption = ({ questionId, optionId }) => {
+    return {
+        type: 'select_option',
+        payload: {
+            questionId: questionId,
+            optionId: optionId
+        }
+    }
+}

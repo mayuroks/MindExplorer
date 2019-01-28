@@ -1,41 +1,31 @@
 import React, { Component } from 'react';
 import { View, Text, TouchableOpacity } from 'react-native';
 import { RadioGroup, RadioButton } from 'react-native-flexi-radio-button'
-
+import { connect } from 'react-redux';
+import * as actions from '../actions';
 
 class QuestionCard extends Component {
     componentWillMount() {
         console.log("QuestionCard componentWillMount");
-        // this.props.nextQuestion();
     }
 
     onSelect(index, value) {
-        this.setState({
-            text: `Selected index: ${index} , value: ${value}`
-        })
+        selection = {
+            questionId: this.props.questionId,
+            optionId: index
+        }
+        
+        this.props.selectOption(selection);
     }
 
     render() {
         const {
-            question,
-            questionId,
-            questionCount,
-            option1,
-            option2,
-            onPress1,
-            onPress2
+            question, questionId, questionCount, option1, option2, onPress1, onPress2
         } = this.props;
 
         const {
-            containerStyle,
-            questionStyle,
-            optionStyle,
-            cardContainer,
-            questionCountStyle,
-            optionsContainerStyle,
-            nextButtonStyle,
-            nextButtonTextStyle,
-            buttonContainerStyle
+            containerStyle, questionStyle, optionStyle, cardContainer, questionCountStyle,
+            optionsContainerStyle, nextButtonStyle, nextButtonTextStyle, buttonContainerStyle
         } = styles;
 
         return (
@@ -48,7 +38,7 @@ class QuestionCard extends Component {
                         style={optionsContainerStyle}
                         onSelect={(index, value) => this.onSelect(index, value)}
                         color='red'
-                        selectedIndex='0'>
+                        selectedIndex={this.props.answerMap[questionId]}>
                         <RadioButton value={'item1'} >
                             <Text style={optionStyle}>{option1}</Text>
                         </RadioButton>
@@ -73,7 +63,13 @@ class QuestionCard extends Component {
     }
 }
 
-export default QuestionCard;
+const mapStateToProps = (state) => {
+    return {
+        answerMap: state.personalityTest
+    }
+}
+
+export default connect(mapStateToProps, actions)(QuestionCard);
 
 const styles = {
     containerStyle: {

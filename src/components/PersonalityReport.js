@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Text, View } from 'react-native';
+import { connect } from 'react-redux';
 
 class PersonalityReport extends Component {
     componentWillMount() {
@@ -15,4 +16,10 @@ class PersonalityReport extends Component {
     };
 }
 
-export default PersonalityReport;
+const mapStateToProps = (state) => {
+    return {
+        answersMaps: state.personalityTest.answerMap
+    }
+}
+
+export default connect(mapStateToProps)(PersonalityReport);

@@ -11,7 +11,7 @@ export default (state = INITIAL_STATE, action) => {
         case 'next_question':
             return {
                 ...state,
-                questionId: state.questionId + 1,
+                questionId: state.questionId + 1, // FIXME give wrong question number
                 question: data[state.questionId],
                 questionCount: data.length
             };
