@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Text, View } from 'react-native';
 import { connect } from 'react-redux';
+import * as PersonalityUtils from '../domain';
 
 class PersonalityReport extends Component {
     componentWillMount() {
@@ -8,9 +9,11 @@ class PersonalityReport extends Component {
     }
 
     render() {
+        console.log("PersonalityReport");
+        console.log(this.props.answerMap);
         return (
             <View>
-                <Text>Here is your personality report</Text>
+                <Text>Here is your personality report {PersonalityUtils.getPersonalityType(this.props.answerMap)}</Text>
             </View>
         );
     };
@@ -18,7 +21,7 @@ class PersonalityReport extends Component {
 
 const mapStateToProps = (state) => {
     return {
-        answersMaps: state.personalityTest.answerMap
+        answerMap: state.personalityTest
     }
 }
 

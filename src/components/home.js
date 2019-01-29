@@ -31,7 +31,6 @@ class Home extends Component {
                     onPress={this.props.nextScreen} />
             case TEST_IN_PROGRESS:
                 console.log("renderScreen test in progress");
-                // this.props.nextQuestion();
                 return this.renderQuestion();
             case TEST_FINISHED:
                 console.log("renderScreen test finished");
