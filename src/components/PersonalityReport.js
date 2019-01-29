@@ -1,40 +1,62 @@
-import React, { Component } from 'react';
-import { Text, View, FlatList } from 'react-native';
+import React, { Component } from 'react';import { Text, View, FlatList, ScrollView } from 'react-native';
 import { connect } from 'react-redux';
 import * as PersonalityUtils from '../domain';
 import SummaryCard from './SummaryCard';
+import personalities from '../personalities.json';
 
 class PersonalityReport extends Component {
     componentWillMount() {
         console.log("PersonalityReport componentWillMount");
     }
 
-    _renderItem({ item }) {
-        const { itemStyle } = styles;
+    _renderTraitItem({ item }) {
+        const { traitItemStyle } = styles;
         return (
-            <Text style={itemStyle}>
+            <Text style={traitItemStyle}>
                 {item.code} - {item.fullName}
             </Text>
         );
     }
 
+    _renderPersonalityItem({ item }) {
+        const { personalityItemStyle, descriptionTextStyle } = styles;
+        return (
+            <View>
+                <Text style={personalityItemStyle}>
+                    {item.title}
+                </Text>
+                <Text style={descriptionTextStyle}>
+                    {item.description}
+                </Text>
+            </View>
+        );
+    }
+
     render() {
-        const { flatListStyle, itemStyle, container } = styles;
+        const { flatListStyle, traitItemStyle, container } = styles;
         console.log("PersonalityReport");
         console.log(this.props.answerMap);
         const personalityType = PersonalityUtils.getPersonalityType(this.props.answerMap);
         const traits = PersonalityUtils.getPersonalityTraits(personalityType);
-        console.log(traits);
+
+        // FIXME hardcoded values
+        const personality = personalities["ESPF"];
         return (
-            <View style={container}>
+            <ScrollView style={container}>
                 <SummaryCard />
                 <FlatList
                     style={flatListStyle}
                     data={traits}
-                    renderItem={this._renderItem}
+                    renderItem={this._renderTraitItem}
                     keyExtractor={(item, index) => item.code}
                 />
-            </View>
+                <FlatList
+                    style={flatListStyle}
+                    data={personality.data}
+                    renderItem={this._renderPersonalityItem}
+                    keyExtractor={(item, index) => item.title}
+                />
+            </ScrollView>
         );
     };
 }
@@ -56,11 +78,21 @@ const styles = {
         paddingBottom: 8,
         paddingLeft: 24,
         paddingRight: 24,
+        marginBottom: 8
     },
-    itemStyle: {
+    traitItemStyle: {
         fontFamily: 'opensans_regular',
         fontSize: 18,
         paddingTop: 4,
         paddingBottom: 4
+    },
+    personalityItemStyle: {
+        fontFamily: 'opensans_bold',
+        fontSize: 18,
+        paddingTop: 4,
+        paddingBottom: 4
+    },
+    descriptionTextStyle: {
+        fontSize: 18
     }
 }
