@@ -30,7 +30,7 @@ class QuestionCard extends Component {
 
         return (
             <View style={containerStyle}>
-                <Text style={questionCountStyle}>{questionId}/{questionCount}</Text>
+                <Text style={questionCountStyle}>{questionId + 1}/{questionCount}</Text>
                 <View style={cardContainer}>
                     <Text style={questionStyle}>{question}</Text>
 

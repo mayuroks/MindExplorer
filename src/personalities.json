@@ -1,0 +1,29 @@
+{
+    "INFJ": {
+        "alias": "Advocate",
+        "personalityType": "ESPF",
+        "shortDescription": "warm, sensitive language, speaking in human terms, rather than with pure logic and fact.",
+        "data": [
+            {
+                "title": "Strengths",
+                "description": "Creative, Insightful, Inspiring and Convincing, Decisive, Determined and Passionate"
+            },
+            {
+                "title": "Weaknesses",
+                "description": "Sensitive, Extremely Private, Perfectionistic, Always Need to Have a Cause, Can Burn Out Easily"
+            },
+            {
+                "title": "Career Paths",
+                "description": "First and foremost, INFJs need to find meaning in their work, to know that they are helping and connecting with people – an INFJ Ferrari salesperson is a non-sequitur. This desire to help and connect makes careers in healthcare, especially the more holistic varieties, very rewarding for INFJs – roles as counselors, psychologists, doctors, life coaches and spiritual guides are all attractive options."
+            },
+            {
+                "title": "Romantic Relationships",
+                "description": "When it comes to romantic relationships, INFJs take the process of finding a partner seriously. Not ones for casual encounters, people with the INFJ personality type instead look for depth and meaning in their relationships. INFJs will take the time necessary to find someone they truly connect with – once they’ve found that someone, their relationships will reach a level of depth and sincerity that most people can only dream of."
+            },
+            {
+                "title": "Friendships",
+                "description": "There is a running theme with INFJs, and that is a yearning for authenticity and sincerity – in their activities, their romantic relationships, and their friendships. People with the INFJ personality type are unlikely to go for friendships of circumstance, like workplace social circles or chatting up their local baristas, where the only thing they really have in common is a day-to-day familiarity. Rather, INFJs seek out people who share their passions, interests and ideologies, people with whom they can explore philosophies and subjects that they believe are truly meaningful."
+            }
+        ]
+    }
+}
