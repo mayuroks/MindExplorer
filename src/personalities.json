@@ -1,29 +1,173 @@
 {
-    "ESPF": {
-        "alias": "Advocate",
-        "personalityType": "ESPF",
+    "ESFP": {
+        "alias": "The Advocate",
+        "personalityType": "ESFP",
         "shortDescription": "warm, sensitive language, speaking in human terms, rather than with pure logic and fact.",
         "data": [
             {
                 "title": "Strengths",
-                "description": "Creative, Insightful, Inspiring and Convincing, Decisive, Determined and Passionate"
+                "description": "Creative, Insightful, Inspiring and Convincing, Decisive, Determined and Passionate",
+                "iconUrl": ""
             },
             {
                 "title": "Weaknesses",
-                "description": "Sensitive, Extremely Private, Perfectionistic, Always Need to Have a Cause, Can Burn Out Easily"
+                "description": "Sensitive, Extremely Private, Perfectionistic, Always Need to Have a Cause, Can Burn Out Easily",
+                "iconUrl": ""
             },
             {
                 "title": "Career Paths",
-                "description": "First and foremost, INFJs need to find meaning in their work, to know that they are helping and connecting with people – an INFJ Ferrari salesperson is a non-sequitur. This desire to help and connect makes careers in healthcare, especially the more holistic varieties, very rewarding for INFJs – roles as counselors, psychologists, doctors, life coaches and spiritual guides are all attractive options."
+                "description": "First and foremost, INFJs need to find meaning in their work, to know that they are helping and connecting with people – an INFJ Ferrari salesperson is a non-sequitur. This desire to help and connect makes careers in healthcare, especially the more holistic varieties, very rewarding for INFJs – roles as counselors, psychologists, doctors, life coaches and spiritual guides are all attractive options.",
+                "iconUrl": ""
             },
             {
                 "title": "Romantic Relationships",
-                "description": "When it comes to romantic relationships, INFJs take the process of finding a partner seriously. Not ones for casual encounters, people with the INFJ personality type instead look for depth and meaning in their relationships. INFJs will take the time necessary to find someone they truly connect with – once they’ve found that someone, their relationships will reach a level of depth and sincerity that most people can only dream of."
+                "description": "When it comes to romantic relationships, INFJs take the process of finding a partner seriously. Not ones for casual encounters, people with the INFJ personality type instead look for depth and meaning in their relationships. INFJs will take the time necessary to find someone they truly connect with – once they’ve found that someone, their relationships will reach a level of depth and sincerity that most people can only dream of.",
+                "iconUrl": ""
             },
             {
                 "title": "Friendships",
-                "description": "There is a running theme with INFJs, and that is a yearning for authenticity and sincerity – in their activities, their romantic relationships, and their friendships. People with the INFJ personality type are unlikely to go for friendships of circumstance, like workplace social circles or chatting up their local baristas, where the only thing they really have in common is a day-to-day familiarity. Rather, INFJs seek out people who share their passions, interests and ideologies, people with whom they can explore philosophies and subjects that they believe are truly meaningful."
+                "description": "There is a running theme with INFJs, and that is a yearning for authenticity and sincerity – in their activities, their romantic relationships, and their friendships. People with the INFJ personality type are unlikely to go for friendships of circumstance, like workplace social circles or chatting up their local baristas, where the only thing they really have in common is a day-to-day familiarity. Rather, INFJs seek out people who share their passions, interests and ideologies, people with whom they can explore philosophies and subjects that they believe are truly meaningful.",
+                "iconUrl": ""
             }
         ]
-    }
+    },
+    "INTJ": {
+        "alias": "The Architect",
+        "personalityType": "INTJ",
+        "shortDescription": "Nothing Can Stop the Right Attitude From Achieving Its Goal",
+        "data": [
+            {
+                "title": "Strengths",
+                "description": "Quick, Imaginative and Strategic Mind, High Self-Confidence, Independent and Decisive, Hard-working and determined, Open-minded, Jacks-of-all-Trades",
+                "iconUrl": ""
+            },
+            {
+                "title": "Weaknesses",
+                "description": "Arrogant, Judgmental, Overly analytical, Loathe highly structured environments, Clueless in romance",
+                "iconUrl": ""
+            },
+            {
+                "title": "Career Paths",
+                "description": "Professional competence is often the area in which INTJs shine most brilliantly. Their capacity for digesting difficult and complex theories and principles and converting them into clear and actionable ideas and strategies is unmatched by any other type. INTJs are able to filter out the noise of a situation, identifying the core thread that needs to be pulled in order to unravel others’ messes so that they can be rewoven into something at once beautifully intricate and stunningly simple in its function.",
+                "iconUrl": ""
+            },
+            {
+                "title": "Romantic Relationships",
+                "description": "In romance, people with the INTJ personality type approach things the way they do with most situations: they compose a series of calculated actions with a predicted and desirable end goal – a healthy long-term relationship. Rather than falling head over heels in a whirlwind of passion and romance, INTJs identify potential partners who meet a certain range of pre-determined criteria, break the dating process down into a series of measurable milestones, then proceed to execute the plan with clinical precision.",
+                "iconUrl": ""
+            },
+            {
+                "title": "Friendships",
+                "description": "People with the INTJ personality type tend to have more success in developing friendships than they do with romantic relationships, but they none-the-less suffer from many of the same setbacks, substituting rational processes for emotional availability. This intellectual distance tends to go both ways, making INTJs notoriously difficult to read and get to know, and making INTJs not want to bother reading anyone they think isn’t on their level. Overcoming these hurdles is often all but impossible without the sort of instant connection made possible by sharing the Intuitive (N) trait.",
+                "iconUrl": ""
+            }
+        ]
+    },
+    "INTP": {
+        "alias": "The Logician",
+        "personalityType": "INTJ",
+        "shortDescription": "the philosopher, the architect, or the dreamy professor, INTPs have been responsible for many scientific discoveries throughout history.",
+        "data": [
+            {
+                "title": "Strengths",
+                "description": "Great Analysts and Abstract Thinkers, Imaginative and Original, Open-Minded, Enthusiastic, Objective, Honest and Straightforward",
+                "iconUrl": ""
+            },
+            {
+                "title": "Weaknesses",
+                "description": "Very Private and Withdrawn, Insensitive, Absent-minded, Condescending, Loathe Rules and Guidelines, Second-Guess Themselves",
+                "iconUrl": ""
+            },
+            {
+                "title": "Career Paths",
+                "description": "INTPs are solitary, eccentric, and independent – none of which is listed as desirable for corporate positions, which are usually designed for very different personality types. INTPs duly struggle in finding careers that meet their needs, but what they do bring, qualities in much higher demand, are creativity, a passion for theoretical methods and ideas, and an entrepreneurial, innovative spirit. If they are able to put this better foot forward to secure a position in a suitable line of work, people with the INTP personality type will find that, whatever the job listing says, these \"less desirable\" qualities will prove an asset after all.",
+                "iconUrl": ""
+            },
+            {
+                "title": "Romantic Relationships",
+                "description": "When it comes to romantic relationships, INTPs have an interesting mixture of traits that often pleasantly surprise their partners. People with this personality type are always full of ideas, but they have few opportunities to explore their more romantic notions. As with any of their theories, INTPs love sharing with others, and in finally meeting someone where romantic thoughts are appropriate, they show themselves to be excited, enthusiastic, and even playful, flirting with word-play and intellectual games.",
+                "iconUrl": ""
+            },
+            {
+                "title": "Friendships",
+                "description": "Many of the usual motivations for making friends – emotional support, social validation, shared routine – simply don’t apply to INTPs. More likely, these concepts are met with disdain, as people with the INTP personality type prize intellectual depth above all else. It is not easy to become good friends with INTPs, but if there is a common interest and a common train of thought, the connection is likely to spark instantly, surprising everyone else who thought they had this distant personality type pegged.",
+                "iconUrl": ""
+            }
+        ]
+    },
+    "ENTJ": {
+        "alias": "The Commander",
+        "personalityType": "ENTJ",
+        "shortDescription": "gifts of charisma and confidence, and project authority in a way that draws crowds together behind a common goal.",
+        "data": [
+            {
+                "title": "Strengths",
+                "description": "Efficient, Energetic, Self-Confident, Strong-Willed, Strategic Thinkers, Charismatic and Inspiring",
+                "iconUrl": ""
+            },
+            {
+                "title": "Weaknesses",
+                "description": "Stubborn and Dominant, Intolerant, Impatient, Arrogant, Poor Handling of Emotions, Cold and Ruthless",
+                "iconUrl": ""
+            },
+            {
+                "title": "Career Paths",
+                "description": "It is in the world of careers that ENTJs’ boldness and drive are truly at their best. No other personality type is better suited than ENTJs to be the respected leader of an organization or team, and no other personality type enjoys it quite so much. Combining their vision, intelligence and determination to push ideas through to completion no matter the obstacles, ENTJs are a force to be reckoned with.",
+                "iconUrl": ""
+            },
+            {
+                "title": "Romantic Relationships",
+                "description": "As in other areas of their lives, ENTJs approach dating and relationships with a set of goals and a plan to achieve them, and proceed to do so with impressive energy and enthusiasm. People with the ENTJ personality type are in it to win, and will gladly take leading roles in relationships from the start, assuming personal responsibility for how smoothly things go and working actively to ensure a mutually rewarding experience. Romantic relationships are a serious business, and ENTJs are in it for the long haul.",
+                "iconUrl": ""
+            },
+            {
+                "title": "Friendships",
+                "description": "As in most aspects of their lives, in friendship ENTJs seek personal growth and inspiration, and they often have a plan for how to accomplish it. Friendships of circumstance, built on things like shared routines, are not ENTJs’ preferred method – rather, they pursue their friends, seek out individuals who share their passion for deep, meaningful discussions, and who enjoy learning and development as much as they do. It is not always easy to be ENTJs’ friends – they demand a lot from these relationships – but they pay a great deal of attention to their friendships, and it is unlikely that it will ever feel stagnant.",
+                "iconUrl": ""
+            }
+        ]
+    },
+    "ENTP": {
+        "alias": "The Debater",
+        "personalityType": "ENTJ",
+        "shortDescription": "No one loves the process of mental sparring more than ENTPs, as it gives them a chance to exercise their effortlessly quick wit, broad accumulated knowledge base, and capacity for connecting disparate ideas to prove their points.",
+        "data": [
+            {
+                "title": "Strengths",
+                "description": "Knowledgeable, Quick Thinkers, Original, Excellent Brainstormers, Charismatic, Energetic",
+                "iconUrl": ""
+            },
+            {
+                "title": "Weaknesses",
+                "description": "Very Argumentative, Insensitive, Intolerant, Can Find It Difficult to Focus, Dislike Practical Matters",
+                "iconUrl": ""
+            },
+            {
+                "title": "Career Paths",
+                "description": "In the world of careers, ENTPs have the benefit of being naturally engaged and interested in being productive and helpful. But rather than the sort of people-oriented helpfulness that Diplomats bring to the table, ENTP personalities are focused on developing solutions to interesting and diverse technical and intellectual problems. ENTPs are a versatile personality type, and while it may take time for them to get to a point where they can fully utilize their skillset and qualities, they are likely to find that those qualities translate well into pretty much any career that so much as piques their interest.",
+                "iconUrl": ""
+            },
+            {
+                "title": "Romantic Relationships",
+                "description": "If there’s one thing ENTPs are good at, it’s coming up with a never-ending stream of innovations and ideas to keep things moving forward, and this is evident in their romantic relationships as well. For people with the ENTP personality type growth is key, and even before they’ve found a dating partner, they imagine all the ways that they can experience new things together, to grow in tandem. This can be an overwhelming process if their partner doesn’t match up, but when ENTPs find someone who shares their love of intellectual exploration, watch out.",
+                "iconUrl": ""
+            },
+            {
+                "title": "Friendships",
+                "description": "Loyalty, support, emotional feedback – these are not what ENTPs look for in their friendships. The last thing people with the ENTP personality type want to hear is "you’re right", not unless they have absolutely earned the distinction in a heated round of intellectual debate. If they’re wrong, ENTPs want to be told so, and they want every detail of the faults in their logic to be laid bare, partly in their quest for oftentimes arbitrary truth, and partly just so they have to work to defend that logic with counterpoint and parry.",
+                "iconUrl": ""
+            }
+        ]
+    },
+    "INFJ": {},
+    "INFP": {},
+    "ENFJ": {},
+    "ENFP": {},
+    "ISTJ": {},
+    "ISFJ": {},
+    "ESTJ": {},
+    "ESFJ": {},
+    "ISTP": {},
+    "ISFP": {},
+    "ESTP": {}
 }

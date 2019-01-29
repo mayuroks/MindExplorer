@@ -40,7 +40,7 @@ class PersonalityReport extends Component {
         const traits = PersonalityUtils.getPersonalityTraits(personalityType);
 
         // FIXME hardcoded values
-        const personality = personalities["ESPF"];
+        const personality = personalities["ESFP"];
         return (
             <ScrollView style={container}>
                 <SummaryCard
