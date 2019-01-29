@@ -12,9 +12,15 @@ class SummaryCard extends Component {
                 <Image
                     style={profilePicStyle}
                     source={Images.startPersonality.profilePic} />
-                <Text style={aliasTextStyle}>"Protagonist"</Text>
-                <Text style={personTypeTextStyle}>"ESFP</Text>
-                <Text style={descriptionTextStyle}>A lot of what establishes and deepens ISFJs’ friendships is the mutual support</Text>
+                <Text style={aliasTextStyle}>
+                    {this.props.alias}
+                </Text>
+                <Text style={personTypeTextStyle}>
+                    {this.props.personalityType}
+                </Text>
+                <Text style={descriptionTextStyle}>
+                    {this.props.description}
+                </Text>
             </View>
         );
     }

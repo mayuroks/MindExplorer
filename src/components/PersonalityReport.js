@@ -1,4 +1,4 @@
-import React, { Component } from 'react';import { Text, View, FlatList, ScrollView } from 'react-native';
+import React, { Component } from 'react'; import { Text, View, FlatList, ScrollView } from 'react-native';
 import { connect } from 'react-redux';
 import * as PersonalityUtils from '../domain';
 import SummaryCard from './SummaryCard';
@@ -19,7 +19,7 @@ class PersonalityReport extends Component {
     }
 
     _renderPersonalityItem({ item }) {
-        const { personalityItemStyle, descriptionTextStyle } = styles;
+        const { personalityItemStyle, descriptionTextStyle, absolute } = styles;
         return (
             <View>
                 <Text style={personalityItemStyle}>
@@ -43,7 +43,11 @@ class PersonalityReport extends Component {
         const personality = personalities["ESPF"];
         return (
             <ScrollView style={container}>
-                <SummaryCard />
+                <SummaryCard
+                    alias={personality.alias}
+                    personalityType={personality.personalityType}
+                    description={personality.shortDescription}
+                />
                 <FlatList
                     style={flatListStyle}
                     data={traits}
@@ -94,5 +98,9 @@ const styles = {
     },
     descriptionTextStyle: {
         fontSize: 18
-    }
+    },
+    absolute: {
+        position: "absolute",
+        top: 0, left: 0, bottom: 0, right: 0,
+    },
 }
