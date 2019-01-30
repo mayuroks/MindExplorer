@@ -15,6 +15,7 @@ import { Text, View } from 'react-native';
 // step 2: create a provider
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
+import Router from './src/reducers/Router';
 
 // FIXME be careful on how you import
 import reducers from './src/reducers';
@@ -25,7 +26,7 @@ class App extends Component {
     render() {
         return (
             <Provider store={createStore(reducers)}>
-                <Home></Home>
+                <Router />
             </Provider>
         );
     }
