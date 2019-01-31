@@ -75,6 +75,7 @@ export default connect(mapStateToProps)(PersonalityReport);
 
 const styles = {
     container: {
+        backgroundColor: '#ECEFF1'
     },
     flatListStyle: {
         backgroundColor: 'white',
@@ -97,7 +98,8 @@ const styles = {
         paddingBottom: 4
     },
     descriptionTextStyle: {
-        fontSize: 18
+        fontSize: 18,
+        marginBottom: 16
     },
     absolute: {
         position: "absolute",
