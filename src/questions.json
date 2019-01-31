@@ -1,121 +1,121 @@
 [
     {
         "id": 0,
-        "title": "First Here is the question you want to we want you to answer?",
+        "title":"What do you prefer?",
         "option1": "expend energy, enjoy groups",
         "option2": "conserve energy, enjoy one-on-one"
     },
     {
         "id": 1,
-        "title": "Second Here is the question you want to we want you to answer?",
+        "title":"What do you prefer?",
         "option1": "interpret literally",
         "option2": "look for meaning and possibilities"
     },
     {
         "id": 2,
-        "title": "Third Here is the question you want to we want you to answer?",
+        "title":"What do you prefer?",
         "option1": "logical, thinking, questioning",
         "option2": "empathetic, feeling, accommodating"
     },
     {
         "id": 3,
-        "title": "Fourth Here is the question you want to we want you to answer?",
+        "title":"What do you prefer?",
         "option1": "organized, orderly",
         "option2": "flexible, adaptable"
     },
     {
         "id": 4,
-        "title": "Second Here is the question you want to we want you to answer?",
+        "title":"What do you prefer?",
         "option1": "more outgoing, think out loud",
         "option2": "more reserved, think to yourself"
     },
     {
         "id": 5,
-        "title": "Third Here is the question you want to we want you to answer?",
+        "title":"What do you prefer?",
         "option1": "practical, realistic, experiential",
         "option2": "imaginative, innovative, theoretical"
     },
     {
         "id": 6,
-        "title": "Fourth Here is the question you want to we want you to answer?",
+        "title":"What do you prefer?",
         "option1": "candid, straight forward, frank",
         "option2": "tactful, kind, encouraging"
     },
     {
         "id": 7,
-        "title": "First Here is the question you want to we want you to answer?",
+        "title":"What do you prefer?",
         "option1": "plan, schedule",
         "option2": "unplanned, spontaneous"
     },
     {
         "id": 8,
-        "title": "Second Here is the question you want to we want you to answer?",
+        "title":"What do you prefer?",
         "option1": "seek many tasks, public activities, interaction with others",
         "option2": "seek private, solitary activities with quiet to concentrate"
     },
     {
         "id": 9,
-        "title": "Third Here is the question you want to we want you to answer?",
+        "title":"What do you prefer?",
         "option1": "standard, usual, conventional",
         "option2": "different, novel, unique"
     },
     {
         "id": 10,
-        "title": "Fourth Here is the question you want to we want you to answer?",
+        "title":"What do you prefer?",
         "option1": "firm, tend to criticize, hold the line",
         "option2": "gentle, tend to appreciate, conciliate"
     },
     {
         "id": 11,
-        "title": "Third Here is the question you want to we want you to answer?",
+        "title":"What do you prefer?",
         "option1": "regulated, structured",
         "option2": "easygoing, “live” and “let live”"
     },
     {
         "id": 12,
-        "title": "Fourth Here is the question you want to we want you to answer?",
+        "title":"What do you prefer?",
         "option1": "external, communicative, express yourself",
         "option2": "internal, reticent, keep to yourself"
     },
     {
         "id": 13,
-        "title": "First Here is the question you want to we want you to answer?",
+        "title":"What do you prefer?",
         "option1": "focus on here-and-now",
         "option2": "look to the future, global perspective, “big picture”"
     },
     {
         "id": 14,
-        "title": "Second Here is the question you want to we want you to answer?",
+        "title":"What do you prefer?",
         "option1": "tough-minded, just",
         "option2": "tender-hearted, merciful"
     },
     {
         "id": 15,
-        "title": "Third Here is the question you want to we want you to answer?",
+        "title":"What do you prefer?",
         "option1": "preparation, plan ahead",
         "option2": "go with the flow, adapt as you go"
     },
     {
         "id": 16,
-        "title": "Fourth Here is the question you want to we want you to answer?",
+        "title":"What do you prefer?",
         "option1": "active, initiate",
         "option2": "reflective, deliberate"
     },
     {
         "id": 17,
-        "title": "First Here is the question you want to we want you to answer?",
+        "title":"What do you prefer?",
         "option1": "facts, things, “what is”",
         "option2": "ideas, dreams, “what could be,” philosophical"
     },
     {
         "id": 18,
-        "title": "Second Here is the question you want to we want you to answer?",
+        "title":"What do you prefer?",
         "option1": "matter of fact, issue-oriented",
         "option2": "sensitive, people-oriented, compassionate"
     },
     {
         "id": 19,
-        "title": "First Here is the question you want to we want you to answer?",
+        "title":"What do you prefer?",
         "option1": "control, govern",
         "option2": "latitude, freedom"
     }

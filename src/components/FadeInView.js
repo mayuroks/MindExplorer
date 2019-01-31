@@ -3,7 +3,7 @@ import { Easing, Animated, Text, View } from 'react-native';
 
 START_OPACITY = 0;
 FINAL_OPACITY = 1;
-ANIM_DURATION = 20000;
+ANIM_DURATION = 10000;
 
 class FadeInView extends Component {
     state = { // Define animation params
@@ -22,7 +22,7 @@ class FadeInView extends Component {
 
     render() {
         return (
-            <Animated.View style={{ opacity: this.state.fadeAnim }} >
+            <Animated.View style={{ ...this.props.style, opacity: this.state.fadeAnim }} >
                 {this.props.children}
             </Animated.View>
         );

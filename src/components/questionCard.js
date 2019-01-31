@@ -3,6 +3,7 @@ import { View, Text, TouchableOpacity } from 'react-native';
 import { RadioGroup, RadioButton } from 'react-native-flexi-radio-button'
 import { connect } from 'react-redux';
 import * as actions from '../actions';
+import FadeInView from './FadeInView';
 
 class QuestionCard extends Component {
     componentWillMount() {
@@ -14,7 +15,7 @@ class QuestionCard extends Component {
             questionId: this.props.questionId,
             optionId: index
         }
-        
+
         this.props.selectOption(selection);
     }
 
@@ -31,6 +32,7 @@ class QuestionCard extends Component {
         return (
             <View style={containerStyle}>
                 <Text style={questionCountStyle}>{questionId + 1}/{questionCount}</Text>
+
                 <View style={cardContainer}>
                     <Text style={questionStyle}>{question}</Text>
 
@@ -90,7 +92,7 @@ const styles = {
         paddingLeft: 24,
         paddingRight: 24,
         elevation: 2,
-        
+
     },
     questionStyle: {
         fontSize: 20,
@@ -100,7 +102,7 @@ const styles = {
     },
     optionStyle: {
         fontSize: 16,
-        marginLeft: 8
+        marginLeft: 8,
     },
     questionCountStyle: {
         textAlign: 'center',

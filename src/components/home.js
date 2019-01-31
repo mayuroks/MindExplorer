@@ -26,22 +26,22 @@ class Home extends Component {
 
     renderScreen() {
         console.log("renderScreen");
-        return <PersonalityReport />;
+        // return <PersonalityReport />;
         // FIXME remove this
-        // switch (this.props.userStage) {
-        //     case READY_FOR_TEST:
-        //         console.log("renderScreen start test");
-        //         return <StartPersonalityTest
-        //             onPress={this.props.nextScreen} />
-        //     case TEST_IN_PROGRESS:
-        //         console.log("renderScreen test in progress");
-        //         return this.renderQuestion();
-        //     case TEST_FINISHED:
-        //         console.log("renderScreen test finished");
-        //         return <PersonalityReport />
-        //     default:
-        //         return <StartPersonalityTest />
-        // }
+        switch (this.props.userStage) {
+            case READY_FOR_TEST:
+                console.log("renderScreen start test");
+                return <StartPersonalityTest
+                    onPress={this.props.nextScreen} />
+            case TEST_IN_PROGRESS:
+                console.log("renderScreen test in progress");
+                return this.renderQuestion();
+            case TEST_FINISHED:
+                console.log("renderScreen test finished");
+                return <PersonalityReport />
+            default:
+                return <StartPersonalityTest />
+        }
     }
 
     renderQuestion() {
