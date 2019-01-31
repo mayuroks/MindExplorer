@@ -6,7 +6,7 @@ const RouterComponent = () => {
     return (
         <Router>
             <Scene key="root">
-                <Scene key="home" component={Home} title="Home" />
+                <Scene key="home" component={Home} title="Home" hideNavBar={true} />
             </Scene>
         </Router>
     );

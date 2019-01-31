@@ -6,6 +6,7 @@ import { connect } from 'react-redux';
 import * as actions from '../actions';
 import PersonalityReport from './PersonalityReport';
 import StartPersonalityTest from './StartPersonalityTest';
+
 import {
     READY_FOR_TEST,
     TEST_IN_PROGRESS,
@@ -24,6 +25,8 @@ class Home extends Component {
 
     renderScreen() {
         console.log("renderScreen");
+        // return <PersonalityReport />;
+        // FIXME remove this
         switch (this.props.userStage) {
             case READY_FOR_TEST:
                 console.log("renderScreen start test");
