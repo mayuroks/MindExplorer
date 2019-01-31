@@ -81,8 +81,8 @@ const styles = {
         marginRight: 24,
     },
     cardContainer: {
-        borderWidth: 2,
-        borderRadius: 4,
+        borderWidth: 1,
+        borderRadius: 8,
         borderColor: '#ECEFF1',
         marginTop: 32,
         paddingTop: 16,
@@ -90,9 +90,7 @@ const styles = {
         paddingLeft: 24,
         paddingRight: 24,
         elevation: 2,
-        shadowRadius: 8,
-        shadowOpacity: 0.8,
-        shadowOffset: { height: 80, width: 0 }
+        
     },
     questionStyle: {
         fontSize: 20,

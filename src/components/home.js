@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Text, View } from 'react-native';
+import { Text, View, BackHandler } from 'react-native';
 import Header from './Header';
 import QuestionCard from './QuestionCard';
 import { connect } from 'react-redux';
@@ -12,15 +12,16 @@ import {
     TEST_IN_PROGRESS,
     TEST_FINISHED
 } from '../reducers/userStages';
+import { Actions } from 'react-native-router-flux';
 
 class Home extends Component {
-    componentWillMount() {
-        console.log("Home will mount");
-    }
 
     componentDidMount() {
-        console.log("Home did mount");
         this.props.nextQuestion(); // FIXME prefetching a question
+    }
+
+    componentWillUnmount() {
+        
     }
 
     renderScreen() {
@@ -65,7 +66,8 @@ class Home extends Component {
     render() {
         return (
             <View style={{
-                flex: 1
+                flex: 1,
+                backgroundColor: 'white'
             }}>
                 {this.renderScreen()}
             </View>

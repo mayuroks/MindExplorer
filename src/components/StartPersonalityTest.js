@@ -17,7 +17,8 @@ class StartPersonalityTest extends Component {
             bottom,
             imageStyle,
             profilePicStyle,
-            userInfoStyle
+            userInfoStyle,
+            instructionTextStyle
         } = styles;
         // console.log(Images.explore);
 
@@ -31,8 +32,8 @@ class StartPersonalityTest extends Component {
                     <Text style={userFullNameStyle}>Mayur Rokade</Text>
                 </View>
                 <View>
-
                     <Text style={nudgeTextStyle}>Explore your mind right now!!</Text>
+                    <Text style={instructionTextStyle}>Finish the test in 2 mins or less</Text>
                     <Image
                         source={Images.startPersonality.mindImage}
                         style={imageStyle}
@@ -94,6 +95,12 @@ const styles = {
         marginTop: 64,
         textAlign: 'center',
         fontFamily: 'opensans_bold'
+    },
+    instructionTextStyle: {
+        fontSize: 16,
+        marginTop: 12,
+        textAlign: 'center',
+        fontFamily: 'opensans_regular'
     },
     imageStyle: {
         width: 200,
