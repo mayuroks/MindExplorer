@@ -1,26 +1,38 @@
 import React, { Component } from 'react';
 import Images from '../../assets';
-import { View, Image, Text } from 'react-native';
+import { View, Image, Text, TouchableOpacity } from 'react-native';
+import FadeInView from './FadeInView';
 
 class SummaryCard extends Component {
 
     render() {
-        const { container, profilePicStyle, aliasTextStyle, personTypeTextStyle, descriptionTextStyle } = styles;
+        const { container, profilePicStyle, aliasTextStyle,
+            personTypeTextStyle, descriptionTextStyle,
+            buttonContainerStyle, buttonTextStyle } = styles;
 
         return (
             <View style={container}>
                 <Image
                     style={profilePicStyle}
                     source={Images.startPersonality.profilePic} />
-                <Text style={aliasTextStyle}>
-                    {this.props.alias}
-                </Text>
+
+                <FadeInView>
+                    <Text style={aliasTextStyle}>
+                        {this.props.alias}
+                    </Text>
+                </FadeInView>
+
                 <Text style={personTypeTextStyle}>
                     {this.props.personalityType}
                 </Text>
                 <Text style={descriptionTextStyle}>
                     {this.props.description}
                 </Text>
+                <View style={{ backgroundColor: 'white' }}>
+                    <TouchableOpacity>
+                        <Text style={buttonTextStyle}>Test again for 69$</Text>
+                    </TouchableOpacity>
+                </View>
             </View>
         );
     }
@@ -61,5 +73,27 @@ const styles = {
         fontFamily: 'opensans_regular',
         alignSelf: 'center',
         marginTop: 16
-    }
+    },
+    buttonContainerStyle: {
+        backgroundColor: 'red',
+        alignItems: 'center',
+        justifyContent: 'center',
+        height: 48,
+        borderRadius: 8,
+        marginBottom: 8,
+        marginTop: 28,
+        marginLeft: 16,
+        marginRight: 16,
+        shadowOffset: { width: 0, height: 8 },
+        shadowOpacity: 0.8,
+        shadowRadius: 8,
+        elevation: 2,
+    },
+    buttonTextStyle: {
+        fontSize: 20,
+        color: 'red',
+        fontFamily: 'opensans_regular',
+        textAlign: 'center',
+        marginTop: 28
+    },
 }

@@ -26,7 +26,6 @@ class Home extends Component {
 
     renderScreen() {
         console.log("renderScreen");
-        // return <PersonalityReport />;
         // FIXME remove this
         switch (this.props.userStage) {
             case READY_FOR_TEST:

@@ -3,7 +3,7 @@ import { Easing, Animated, Text, View } from 'react-native';
 
 START_OPACITY = 0;
 FINAL_OPACITY = 1;
-ANIM_DURATION = 10000;
+ANIM_DURATION = 2000;
 
 class FadeInView extends Component {
     state = { // Define animation params
@@ -15,9 +15,12 @@ class FadeInView extends Component {
             this.state.fadeAnim,
             {
                 toValue: FINAL_OPACITY,
-                duration: ANIM_DURATION
+                duration: ANIM_DURATION,
+                easing: Easing.linear,
+                useNativeDriver: true
             }
         ).start();
+
     }
 
     render() {

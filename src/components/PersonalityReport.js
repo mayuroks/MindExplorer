@@ -1,4 +1,5 @@
-import React, { Component } from 'react'; import { Text, View, FlatList, ScrollView } from 'react-native';
+import React, { Component } from 'react';
+import { TouchableOpacity, Text, View, FlatList, ScrollView } from 'react-native';
 import { connect } from 'react-redux';
 import * as PersonalityUtils from '../domain';
 import SummaryCard from './SummaryCard';
@@ -33,14 +34,12 @@ class PersonalityReport extends Component {
     }
 
     render() {
-        const { flatListStyle, traitItemStyle, container } = styles;
+        const { flatListStyle, container } = styles;
         console.log("PersonalityReport");
         console.log(this.props.answerMap);
         const personalityType = PersonalityUtils.getPersonalityType(this.props.answerMap);
         const traits = PersonalityUtils.getPersonalityTraits(personalityType);
-
-        // FIXME hardcoded values
-        const personality = personalities["ESFP"];
+        const personality = personalities[personalityType];
         return (
             <ScrollView style={container}>
                 <SummaryCard
@@ -104,5 +103,5 @@ const styles = {
     absolute: {
         position: "absolute",
         top: 0, left: 0, bottom: 0, right: 0,
-    },
+    }
 }

@@ -33,23 +33,25 @@ class QuestionCard extends Component {
             <View style={containerStyle}>
                 <Text style={questionCountStyle}>{questionId + 1}/{questionCount}</Text>
 
-                <View style={cardContainer}>
-                    <Text style={questionStyle}>{question}</Text>
+                <FadeInView>
+                    <View style={cardContainer}>
+                        <Text style={questionStyle}>{question}</Text>
 
-                    <RadioGroup
-                        style={optionsContainerStyle}
-                        onSelect={(index, value) => this.onSelect(index, value)}
-                        color='red'
-                        selectedIndex={this.props.answerMap[questionId]}>
-                        <RadioButton value={'item1'} >
-                            <Text style={optionStyle}>{option1}</Text>
-                        </RadioButton>
+                        <RadioGroup
+                            style={optionsContainerStyle}
+                            onSelect={(index, value) => this.onSelect(index, value)}
+                            color='red'
+                            selectedIndex={this.props.answerMap[questionId]}>
+                            <RadioButton value={'item1'} >
+                                <Text style={optionStyle}>{option1}</Text>
+                            </RadioButton>
 
-                        <RadioButton value={'item2'}>
-                            <Text style={optionStyle}>{option2}</Text>
-                        </RadioButton>
-                    </RadioGroup>
-                </View>
+                            <RadioButton value={'item2'}>
+                                <Text style={optionStyle}>{option2}</Text>
+                            </RadioButton>
+                        </RadioGroup>
+                    </View>
+                </FadeInView>
 
                 <View style={buttonContainerStyle}>
                     <TouchableOpacity
