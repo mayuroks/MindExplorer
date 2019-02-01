@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Images from '../../assets';
 import { View, Image, Text, TouchableOpacity } from 'react-native';
-import FadeInView from './FadeInView';
+import FadeInView from './common/FadeInView';
 
 class SummaryCard extends Component {
 

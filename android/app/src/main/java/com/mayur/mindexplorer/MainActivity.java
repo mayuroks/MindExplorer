@@ -1,4 +1,4 @@
-package com.personality;
+package com.mayur.mindexplorer;
 
 import com.facebook.react.ReactActivity;
 

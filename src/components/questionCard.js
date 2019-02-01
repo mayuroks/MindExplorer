@@ -3,7 +3,7 @@ import { View, Text, TouchableOpacity } from 'react-native';
 import { RadioGroup, RadioButton } from 'react-native-flexi-radio-button'
 import { connect } from 'react-redux';
 import * as actions from '../actions';
-import FadeInView from './FadeInView';
+import FadeInView from './common/FadeInView';
 
 class QuestionCard extends Component {
     componentWillMount() {
