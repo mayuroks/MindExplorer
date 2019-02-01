@@ -5,7 +5,10 @@ const DUMMY_PROFILE_PIC = 'https://daks2k3a4ib2z.cloudfront.net/55d62f32fa59c519
 const Images = {
     startPersonality: {
         mindImage: require('./free_personality_test.png'),
-        profilePic: {uri: DUMMY_PROFILE_PIC}
+        profilePic: { uri: DUMMY_PROFILE_PIC }
+    },
+    splash: {
+        logoImage: require('./mind_explorer_logo.png')
     }
 }
 

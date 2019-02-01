@@ -20,13 +20,15 @@ import Router from './src/reducers/Router';
 // FIXME be careful on how you import
 import reducers from './src/reducers';
 import Home from './src/components/Home';
+import Splash from './src/components/Splash';
 
 // make component
 class App extends Component {
     render() {
         return (
             <Provider store={createStore(reducers)}>
-                <Home />
+                {/* <Home /> */}
+                <Splash />
             </Provider>
         );
     }
