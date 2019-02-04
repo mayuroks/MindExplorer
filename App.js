@@ -28,7 +28,8 @@ class App extends Component {
         return (
             <Provider store={createStore(reducers)}>
                 {/* <Home /> */}
-                <Splash />
+                {/* <Splash /> */}
+                <Router />
             </Provider>
         );
     }

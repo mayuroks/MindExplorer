@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Text, View, Animated, Image } from 'react-native';
 import Images from '../../assets';
+import { Actions } from 'react-native-router-flux';
 
 class Splash extends Component {
     state = {
@@ -45,7 +46,9 @@ class Splash extends Component {
                     useNativeDriver: true
                 }
             ),
-        ]).start();
+        ]).start(() => {
+            Actions.home();
+        });
     }
 
     render() {
