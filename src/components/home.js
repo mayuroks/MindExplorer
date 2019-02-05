@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Text, View, BackHandler } from 'react-native';
 import Header from './common/Header';
-import QuestionCard from './QuestionCard';
+import QuestionCard from './QuestionCard2'; // FIXME remove this
 import { connect } from 'react-redux';
 import * as actions from '../actions';
 import PersonalityReport from './PersonalityReport';
