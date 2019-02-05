@@ -33,7 +33,7 @@ class StartPersonalityTest extends Component {
                     <Text style={userFullNameStyle}>Hey there!</Text>
                 </View>
                 <View>
-                    <Text style={nudgeTextStyle}>Explore your mind right now!!</Text>
+                    <Text style={nudgeTextStyle}>Test your personality now!</Text>
                     <Text style={instructionTextStyle}>Finish the test in 2 mins or less</Text>
                     <Image
                         source={Images.startPersonality.mindImage}
@@ -94,7 +94,7 @@ const styles = {
     },
     nudgeTextStyle: {
         fontSize: 22,
-        marginTop: 64,
+        marginTop: 48,
         textAlign: 'center',
         fontFamily: 'opensans_bold',
         color: Color.Text
@@ -128,6 +128,7 @@ const styles = {
     userInfoStyle: {
         flexDirection: 'row',
         alignItems: 'center',
-        marginLeft: 24
+        marginLeft: 24,
+        marginTop: 16
     }
 }
