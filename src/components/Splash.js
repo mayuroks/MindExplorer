@@ -53,7 +53,10 @@ class Splash extends Component {
     }
 
     goToHome() {
-        setTimeout(() => Actions.home(), 1000);
+        setTimeout(() => {
+            Actions.pop();
+            Actions.home();
+        }, 1000);
     }
 
     render() {
