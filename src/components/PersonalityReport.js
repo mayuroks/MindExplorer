@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import * as PersonalityUtils from '../domain';
 import SummaryCard from './SummaryCard';
 import personalities from '../personalities.json';
+import Color from './common/Color';
 
 class PersonalityReport extends Component {
     componentWillMount() {
@@ -39,7 +40,8 @@ class PersonalityReport extends Component {
         console.log(this.props.answerMap);
         const personalityType = PersonalityUtils.getPersonalityType(this.props.answerMap);
         const traits = PersonalityUtils.getPersonalityTraits(personalityType);
-        const personality = personalities[personalityType];
+        // const personality = personalities[personalityType];
+        const personality = personalities["INTJ"];
         return (
             <ScrollView style={container}>
                 <SummaryCard
@@ -74,7 +76,7 @@ export default connect(mapStateToProps)(PersonalityReport);
 
 const styles = {
     container: {
-        backgroundColor: '#ECEFF1'
+        backgroundColor: Color.Primary
     },
     flatListStyle: {
         backgroundColor: 'white',
@@ -82,7 +84,11 @@ const styles = {
         paddingBottom: 8,
         paddingLeft: 24,
         paddingRight: 24,
-        marginBottom: 8
+        marginBottom: 8,
+        borderRadius: 8,
+        marginLeft: 8,
+        marginRight: 8,
+        elevation: 2
     },
     traitItemStyle: {
         fontFamily: 'opensans_regular',

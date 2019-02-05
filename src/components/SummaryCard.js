@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import Images from '../../assets';
 import { View, Image, Text, TouchableOpacity } from 'react-native';
 import FadeInView from './common/FadeInView';
+import Color from './common/Color';
+
 
 class SummaryCard extends Component {
 
@@ -18,7 +20,7 @@ class SummaryCard extends Component {
 
                 <FadeInView>
                     <Text style={aliasTextStyle}>
-                        {this.props.alias}
+                        "{this.props.alias}"
                     </Text>
                 </FadeInView>
 
@@ -46,7 +48,12 @@ const styles = {
         paddingLeft: 24,
         paddingRight: 24,
         paddingBottom: 24,
-        marginBottom: 8
+        marginBottom: 8,
+        borderRadius: 8,
+        marginLeft: 8,
+        marginRight: 8,
+        marginTop: 12,
+        elevation: 2
     },
     profilePicStyle: {
         borderRadius: 1000,
@@ -58,7 +65,7 @@ const styles = {
     aliasTextStyle: {
         fontSize: 24,
         fontFamily: 'opensans_bold',
-        color: 'red',
+        color: Color.Primary,
         alignSelf: 'center',
         marginTop: 16
     },
@@ -91,7 +98,7 @@ const styles = {
     },
     buttonTextStyle: {
         fontSize: 20,
-        color: 'red',
+        color: Color.Primary,
         fontFamily: 'opensans_regular',
         textAlign: 'center',
         marginTop: 28

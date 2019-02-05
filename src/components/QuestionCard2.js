@@ -22,7 +22,7 @@ class QuestionCard extends Component {
             this.state.cardFactor,
             {
                 toValue: 1,
-                duration: 2000,
+                duration: 1200,
                 easing: Easing.bounce,
                 useNativeDriver: true
             }
