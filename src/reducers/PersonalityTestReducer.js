@@ -12,7 +12,10 @@ export default (state = INITIAL_STATE, action) => {
     switch (action.type) {
         case 'select_option':
             const { questionId, optionId } = action.payload
-            return {...state, [questionId]: optionId};
+            return { ...state, [questionId]: optionId };
+        case 'test_again':
+            state = INITIAL_STATE;
+            return state;
         default:
             return state;
     }

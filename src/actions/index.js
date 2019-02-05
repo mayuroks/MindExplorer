@@ -14,6 +14,13 @@ export const nextScreen = () => {
     }
 }
 
+export const testAgain = () => {
+    return {
+        type: 'test_again',
+        payload: null
+    }
+}
+
 export const selectOption = ({ questionId, optionId }) => {
     return {
         type: 'select_option',

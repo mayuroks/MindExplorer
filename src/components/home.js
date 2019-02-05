@@ -15,15 +15,6 @@ import {
 import { Actions } from 'react-native-router-flux';
 
 class Home extends Component {
-
-    componentDidMount() {
-        this.props.nextQuestion(); // FIXME prefetching a question
-    }
-
-    componentWillUnmount() {
-
-    }
-
     renderScreen() {
         console.log("renderScreen");
         // FIXME remove this

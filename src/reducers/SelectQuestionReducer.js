@@ -16,6 +16,9 @@ export default (state = INITIAL_STATE, action) => {
                 question: data[questionId],
                 questionCount: data.length
             };
+        case 'test_again':
+            state = INITIAL_STATE;
+            return state;
         default:
             return state;
     }

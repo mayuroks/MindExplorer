@@ -3,20 +3,26 @@ import Images from '../../assets';
 import { View, Image, Text, TouchableOpacity } from 'react-native';
 import FadeInView from './common/FadeInView';
 import Color from './common/Color';
-
+import { Actions } from 'react-native-router-flux';
 
 class SummaryCard extends Component {
 
     render() {
         const { container, profilePicStyle, aliasTextStyle,
             personTypeTextStyle, descriptionTextStyle,
-            buttonContainerStyle, buttonTextStyle } = styles;
+            buttonContainerStyle, buttonTextStyle, userMsgTextStyle } = styles;
+
+        const { onPressTestAgain } = this.props;
 
         return (
             <View style={container}>
                 <Image
                     style={profilePicStyle}
                     source={Images.startPersonality.profilePic} />
+
+                <Text style={userMsgTextStyle}>
+                    Your personality type is
+                </Text>
 
                 <FadeInView>
                     <Text style={aliasTextStyle}>
@@ -27,11 +33,13 @@ class SummaryCard extends Component {
                 <Text style={personTypeTextStyle}>
                     {this.props.personalityType}
                 </Text>
+
                 <Text style={descriptionTextStyle}>
-                    {this.props.description}
+                    {this.props.description} Scroll down for detailed analysis.
                 </Text>
+
                 <View style={{ backgroundColor: 'white' }}>
-                    <TouchableOpacity>
+                    <TouchableOpacity onPress={onPressTestAgain}>
                         <Text style={buttonTextStyle}>Test again for 69$</Text>
                     </TouchableOpacity>
                 </View>
@@ -67,13 +75,19 @@ const styles = {
         fontFamily: 'opensans_bold',
         color: Color.Primary,
         alignSelf: 'center',
-        marginTop: 16
+        marginTop: 4
     },
     personTypeTextStyle: {
         fontSize: 24,
         fontFamily: 'opensans_bold',
         alignSelf: 'center',
         marginTop: 4
+    },
+    userMsgTextStyle: {
+        fontSize: 14,
+        fontFamily: 'opensans_regular',
+        alignSelf: 'center',
+        marginTop: 16
     },
     descriptionTextStyle: {
         fontSize: 16,

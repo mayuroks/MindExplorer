@@ -2,10 +2,16 @@ import React, { Component } from 'react';
 import { Text, View, Image, TouchableOpacity } from 'react-native';
 import Images from '../../assets';
 import Color from './common/Color';
+import * as actions from '../actions';
+import { connect } from 'react-redux';
 
 class StartPersonalityTest extends Component {
     componentWillMount() {
         console.log("StartPersonalityTest componentWillMount");
+    }
+
+    componentDidMount() {
+        this.props.nextQuestion();
     }
 
     render() {
@@ -55,7 +61,7 @@ class StartPersonalityTest extends Component {
     };
 }
 
-export default StartPersonalityTest;
+export default connect(null, actions)(StartPersonalityTest);
 
 const styles = {
     container: {

@@ -5,6 +5,7 @@ import * as PersonalityUtils from '../domain';
 import SummaryCard from './SummaryCard';
 import personalities from '../personalities.json';
 import Color from './common/Color';
+import * as actions from '../actions';
 
 class PersonalityReport extends Component {
     componentWillMount() {
@@ -40,11 +41,11 @@ class PersonalityReport extends Component {
         console.log(this.props.answerMap);
         const personalityType = PersonalityUtils.getPersonalityType(this.props.answerMap);
         const traits = PersonalityUtils.getPersonalityTraits(personalityType);
-        // const personality = personalities[personalityType];
-        const personality = personalities["INTJ"];
+        const personality = personalities[personalityType];
         return (
             <ScrollView style={container}>
                 <SummaryCard
+                    onPressTestAgain={this.props.testAgain}
                     alias={personality.alias}
                     personalityType={personality.personalityType}
                     description={personality.shortDescription}
@@ -72,7 +73,7 @@ const mapStateToProps = (state) => {
     }
 }
 
-export default connect(mapStateToProps)(PersonalityReport);
+export default connect(mapStateToProps, actions)(PersonalityReport);
 
 const styles = {
     container: {
