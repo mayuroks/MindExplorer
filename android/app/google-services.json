@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "406399435999",
+    "firebase_url": "https://myauth-4d294.firebaseio.com",
+    "project_id": "myauth-4d294",
+    "storage_bucket": "myauth-4d294.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:406399435999:android:1c33d17e95ade5fe",
+        "android_client_info": {
+          "package_name": "com.mayur.mindexplorer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "406399435999-ljsua31qosgim4u3usi0i8oimupn7phl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAzSrok4rb2xRUBNLWLEm8QDfaMs16qxgI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

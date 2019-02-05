@@ -3,6 +3,8 @@ import { Text, View, Animated, Image } from 'react-native';
 import Images from '../../assets';
 import { Actions } from 'react-native-router-flux';
 
+const lightblue = '#CEE7FE';
+
 class Splash extends Component {
     state = {
         spinValue: new Animated.Value(0),
@@ -47,8 +49,12 @@ class Splash extends Component {
                 }
             ),
         ]).start(() => {
-            Actions.home();
+            this.goToHome();
         });
+    }
+
+    goToHome() {
+        Actions.home();
     }
 
     render() {
@@ -73,10 +79,10 @@ class Splash extends Component {
             outputRange: [0, 1]
         })
 
-        const { logoStyle, appNameStyle } = styles;
+        const { logoStyle, appNameStyle, container } = styles;
 
         return (
-            <View style={{ flex: 1, justifyContent: 'center' }}>
+            <View style={container}>
                 <Animated.Image
                     style={{
                         ...logoStyle,
@@ -97,16 +103,23 @@ class Splash extends Component {
 export default Splash;
 
 const styles = {
+    container: {
+        backgroundColor: '#3B7AD9',
+        flex: 1,
+        justifyContent: 'center'
+    },
     logoStyle: {
         height: 100,
         width: 100,
-        alignSelf: 'center'
+        alignSelf: 'center',
+        tintColor: lightblue
     },
     appNameStyle: {
-        marginBottom: 128,
+        marginBottom: 48,
         fontSize: 32,
         fontFamily: 'opensans_bold',
         alignSelf: 'center',
-        color: 'red'
+        // color: '#444D5B'
+        color: lightblue
     }
 }
