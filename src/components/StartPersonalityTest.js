@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Text, View, Image, TouchableOpacity } from 'react-native';
 import Images from '../../assets';
+import Color from './common/Color';
 
 class StartPersonalityTest extends Component {
     componentWillMount() {
@@ -67,7 +68,7 @@ const styles = {
         justifyContent: 'flex-end'
     },
     buttonContainerStyle: {
-        backgroundColor: 'red',
+        backgroundColor: Color.Primary,
         alignItems: 'center',
         justifyContent: 'center',
         height: 48,
@@ -88,28 +89,33 @@ const styles = {
     userFullNameStyle: {
         fontSize: 32,
         fontFamily: 'opensans_bold',
-        marginLeft: 16
+        marginLeft: 16,
+        color: Color.Text
     },
     nudgeTextStyle: {
         fontSize: 22,
         marginTop: 64,
         textAlign: 'center',
-        fontFamily: 'opensans_bold'
+        fontFamily: 'opensans_bold',
+        color: Color.Text
     },
     instructionTextStyle: {
         fontSize: 16,
         marginTop: 12,
         textAlign: 'center',
-        fontFamily: 'opensans_regular'
+        fontFamily: 'opensans_regular',
+        color: Color.Text
     },
     imageStyle: {
         width: 200,
         height: 200,
         alignSelf: 'center',
         marginTop: 32,
-        borderRadius: 1000,
+        borderRadius: 10,
         borderColor: '#ECEFF1',
-        borderWidth: 1,
+        borderWidth: 0,
+        opacity: 0.5,
+        position: 'relative'
     },
     profilePicStyle: {
         width: 60,

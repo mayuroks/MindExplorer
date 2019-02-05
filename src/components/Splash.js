@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
-import { Text, View, Animated, Image } from 'react-native';
+import { Text, View, Animated, Image, Alert } from 'react-native';
 import Images from '../../assets';
 import { Actions } from 'react-native-router-flux';
-
-const lightblue = '#CEE7FE';
+import Color from './common/Color';
 
 class Splash extends Component {
     state = {
@@ -36,7 +35,7 @@ class Splash extends Component {
                 this.state.moveX,
                 {
                     toValue: 1,
-                    duration: 1000,
+                    duration: 600,
                     useNativeDriver: true
                 }
             ),
@@ -54,7 +53,7 @@ class Splash extends Component {
     }
 
     goToHome() {
-        Actions.home();
+        setTimeout(() => Actions.home(), 2000);
     }
 
     render() {
@@ -104,7 +103,7 @@ export default Splash;
 
 const styles = {
     container: {
-        backgroundColor: '#3B7AD9',
+        backgroundColor: Color.Primary,
         flex: 1,
         justifyContent: 'center'
     },
@@ -112,14 +111,13 @@ const styles = {
         height: 100,
         width: 100,
         alignSelf: 'center',
-        tintColor: lightblue
+        tintColor: 'white'
     },
     appNameStyle: {
         marginBottom: 48,
         fontSize: 32,
         fontFamily: 'opensans_bold',
         alignSelf: 'center',
-        // color: '#444D5B'
-        color: lightblue
+        color: 'white'
     }
 }
