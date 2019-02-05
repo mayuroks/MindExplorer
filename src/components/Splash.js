@@ -46,7 +46,7 @@ class Splash extends Component {
                     duration: 1000,
                     useNativeDriver: true
                 }
-            ),
+            )
         ]).start(() => {
             this.goToHome();
         });
@@ -78,7 +78,12 @@ class Splash extends Component {
             outputRange: [0, 1]
         })
 
-        const { logoStyle, appNameStyle, container } = styles;
+        const fadeTagLine = this.state.fadeAppName.interpolate({
+            inputRange: [0, 1],
+            outputRange: [0, 1]
+        })
+
+        const { logoStyle, appNameStyle, container, tagLineStyle } = styles;
 
         return (
             <View style={container}>
@@ -93,6 +98,9 @@ class Splash extends Component {
 
                 <Animated.Text style={{ ...appNameStyle, opacity: fadeAppName }}>
                     Mind Explorer
+                </Animated.Text>
+                <Animated.Text style={{ ...tagLineStyle, opacity: fadeTagLine }}>
+                    Test your Personality{"\n"}Unlock your Potential
                 </Animated.Text>
             </View >
         );
@@ -114,9 +122,16 @@ const styles = {
         tintColor: 'white'
     },
     appNameStyle: {
-        marginBottom: 48,
+        marginBottom: 16,
         fontSize: 32,
         fontFamily: 'opensans_bold',
+        alignSelf: 'center',
+        color: 'white'
+    },
+    tagLineStyle: {
+        marginBottom: 16,
+        fontSize: 20,
+        fontFamily: 'opensans_regular',
         alignSelf: 'center',
         color: 'white'
     }
