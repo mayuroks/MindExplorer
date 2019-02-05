@@ -30,7 +30,7 @@ class StartPersonalityTest extends Component {
                         style={profilePicStyle}
                         source={Images.startPersonality.profilePic}
                     />
-                    <Text style={userFullNameStyle}>Mayur Rokade</Text>
+                    <Text style={userFullNameStyle}>Hey there!</Text>
                 </View>
                 <View>
                     <Text style={nudgeTextStyle}>Explore your mind right now!!</Text>

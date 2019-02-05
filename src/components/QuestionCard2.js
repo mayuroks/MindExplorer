@@ -22,7 +22,7 @@ class QuestionCard extends Component {
             this.state.cardFactor,
             {
                 toValue: 1,
-                duration: 1000,
+                duration: 2000,
                 easing: Easing.bounce,
                 useNativeDriver: true
             }
@@ -56,10 +56,24 @@ class QuestionCard extends Component {
 
         return (
             <View style={containerStyle}>
-                <Text style={questionCountStyle}>{questionId + 1}/{questionCount}</Text>
+                
+                <View style={{marginBottom: 20}}>
+                    <Text style={questionCountStyle}>Questions answered: {questionId + 1}/{questionCount}</Text>
+
+                    <Progress.Bar
+                        progress={(questionId + 1) / questionCount}
+                        height={15}
+                        width={200}
+                        borderRadius={100}
+                        useNativeDriver={true}
+                        animated={true}
+                        borderColor={'white'}
+                        unfilledColor={'white'}
+                        style={{ alignSelf: "center" }} />
+
+                </View>
 
                 <Animated.View style={{ ...bottomSheetContainer, transform: [{ scaleY: scaleY }] }}>
-
                     <FadeInView>
                         <View style={cardContainer}>
                             <Text style={questionStyle}>{question}</Text>
@@ -142,7 +156,9 @@ const styles = {
     questionCountStyle: {
         textAlign: 'center',
         fontSize: 16,
-        fontFamily: 'opensans_regular'
+        marginBottom: 8,
+        fontFamily: 'opensans_regular',
+        color: Color.White
     },
     optionsContainerStyle: {
         marginTop: 18

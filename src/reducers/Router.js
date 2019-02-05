@@ -3,6 +3,7 @@ import { Scene, Router } from 'react-native-router-flux';
 import Home from '../components/Home';
 import Splash from '../components/Splash';
 // import FBLoginButton from '../components/Login';
+// FIXME remove backstack
 
 const RouterComponent = () => {
     return (
