@@ -8,8 +8,7 @@ const RouterComponent = () => {
     return (
         <Router>
             <Scene key="root">
-                {/* FIXME remove this */}
-                {/* <Scene key="splash" component={Splash} title="Splash" hideNavBar={true} /> */}
+                <Scene key="splash" component={Splash} title="Splash" hideNavBar={true} />
                 <Scene key="home" component={Home} title="Home" hideNavBar={true} />
             </Scene>
         </Router>
