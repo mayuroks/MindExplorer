@@ -4,6 +4,8 @@ import { RadioGroup, RadioButton } from 'react-native-flexi-radio-button'
 import { connect } from 'react-redux';
 import * as actions from '../actions';
 import FadeInView from './common/FadeInView';
+import Color from './common/Color';
+import * as Progress from 'react-native-progress';
 
 class QuestionCard extends Component {
     componentWillMount() {
@@ -32,6 +34,15 @@ class QuestionCard extends Component {
         return (
             <View style={containerStyle}>
                 <Text style={questionCountStyle}>{questionId + 1}/{questionCount}</Text>
+
+                <Progress.Bar
+                    progress={(questionId + 1) / questionCount}
+                    width={200}
+                    height={10}
+                    borderRadius={100}
+                    useNativeDriver={true}
+                    animated={true}
+                    style={{ alignSelf: "center" }} />
 
                 <FadeInView>
                     <View style={cardContainer}>
