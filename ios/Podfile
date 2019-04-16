@@ -6,9 +6,6 @@ target 'MindExplorer' do
   # use_frameworks!
 
   # Pods for MindExplorer
-  pod 'GoogleSignIn', '~> 4.4.0'
-
-
   target 'MindExplorerTests' do
     inherit! :search_paths
     # Pods for testing

@@ -5,6 +5,7 @@
 	};
 	objectVersion = 46;
 	objects = {
+
 /* Begin PBXBuildFile section */
 		00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302AC1ABCB8CE00DB3ED1 /* libRCTActionSheet.a */; };
 		00C302E71ABCBA2D00DB3ED1 /* libRCTGeolocation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302BA1ABCB90400DB3ED1 /* libRCTGeolocation.a */; };
@@ -40,10 +41,8 @@
 		36EEFCC451A089880AD4C1F8 /* libPods-MindExplorer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F01565A00CC9AA7AE36147E /* libPods-MindExplorer.a */; };
 		4608BF01685033F0C712CBA5 /* libPods-MindExplorerTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A924A898515BF83468563A4 /* libPods-MindExplorerTests.a */; };
 		6E437B5914B5AFD1E8DAEAF9 /* libPods-MindExplorer-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B1D47C9DDB89631CDD0AC136 /* libPods-MindExplorer-tvOSTests.a */; };
-		7B3B2737E8264424AFEAF78A /* libRNBlur.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BF4F8EDDC86D46A68F0DC352 /* libRNBlur.a */; };
 		7C32768376286834B6D41A22 /* libPods-MindExplorer-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 87665AD08FB455BF67EA1BC5 /* libPods-MindExplorer-tvOS.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
-		861B9E62F58B4BDCB5C61777 /* libRNGoogleSignin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E6B05D7F19F4AE2A385AEBD /* libRNGoogleSignin.a */; };
 		96F18135B2774B7BA5664171 /* opensans_bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A2D61A68546B459E925A950A /* opensans_bold.ttf */; };
 		A463555F7CB84AB1A85B3A0D /* lato_regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1BBC9D7A7BDE447EAB69490D /* lato_regular.ttf */; };
 		ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */; };
@@ -421,8 +420,6 @@
 				832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */,
 				00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */,
 				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
-				7B3B2737E8264424AFEAF78A /* libRNBlur.a in Frameworks */,
-				861B9E62F58B4BDCB5C61777 /* libRNGoogleSignin.a in Frameworks */,
 				36EEFCC451A089880AD4C1F8 /* libPods-MindExplorer.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -751,7 +748,6 @@
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				555A6FFB9CB8FA09C7DA84AC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -829,6 +825,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -1251,7 +1248,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
+			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh\n";
 		};
 		4B4CAA4F0EFC328834306EFF /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1273,28 +1270,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		555A6FFB9CB8FA09C7DA84AC /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MindExplorer/Pods-MindExplorer-resources.sh",
-				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MindExplorer/Pods-MindExplorer-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		75E03D53958AAE6C5B4A8BE2 /* [CP] Check Pods Manifest.lock */ = {
