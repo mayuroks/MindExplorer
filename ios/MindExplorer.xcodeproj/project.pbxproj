@@ -1283,7 +1283,7 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-MindExplorer/Pods-MindExplorer-resources.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-MindExplorer/Pods-MindExplorer-resources.sh",
 				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
@@ -1294,7 +1294,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MindExplorer/Pods-MindExplorer-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MindExplorer/Pods-MindExplorer-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		75E03D53958AAE6C5B4A8BE2 /* [CP] Check Pods Manifest.lock */ = {
